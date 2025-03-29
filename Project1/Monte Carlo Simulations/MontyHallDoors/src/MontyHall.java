@@ -17,20 +17,22 @@ public class MontyHall {
 
   /*
    * This method handles the Monte Carlo Simulation, having the program pick a random door and keeping track of its correct guesses
+   * 
+   * @param simulations - this is the amount of simulations run, made for configuration
    */
-  public void montyHallMonteCarlo() {
+  public void montyHallMonteCarlo(int simulations) {
     Random rand = new Random();
     int correctGuesses = 0;
 
-    for (int i = 0; i < 10000; i++) {
-      int prizeDoor = rand.nextInt(numOfDoor); // Randomly place the prize
-      int chosenDoor = rand.nextInt(numOfDoor); // Randomly pick a door
+    for (int i = 0; i < simulations; i++) {
+      int prizeDoor = rand.nextInt(numOfDoor);
+      int chosenDoor = rand.nextInt(numOfDoor);
 
       if (chosenDoor == prizeDoor) {
         correctGuesses++;
       }
     }
-    double probability = (double) correctGuesses / 10000 * 100;
+    double probability = (double) correctGuesses / simulations * 100;
     System.out.println("Probability of choosing the correct door: " + probability + "%");
   }
 }

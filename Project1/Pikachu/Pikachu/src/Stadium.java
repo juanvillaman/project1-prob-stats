@@ -66,6 +66,7 @@ public class Stadium {
 
   /*
    * This method handles the overall game loop, with turns going back and forth until a winner is declared
+   * It explains the rules of the game as well as the win conditions
    */
   public void startGame(){
     System.out.println("Welcome to the Pokemon Trading Card Game!");
@@ -118,6 +119,11 @@ public class Stadium {
 }
 
 
+
+  /*
+   * This is the battler we made at the beginning of the semester, where we used speed to determine the turn order.
+   * Both Pokemon attack automatically until one is knocked out, and the standing Pokemon wins
+   */
 
   // public void battle(Pokemon p1, Pokemon p2){
 

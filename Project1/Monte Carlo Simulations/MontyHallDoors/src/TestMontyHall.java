@@ -8,6 +8,6 @@ public class TestMontyHall {
   public static void main(String[] args){
 
     MontyHall test = new MontyHall();
-    test.montyHallMonteCarlo();
+    test.montyHallMonteCarlo(10000);
   }
 }
